@@ -1,0 +1,2364 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="JavaSE_第1章 Java概述, Lucky阳 IT 后端开发 ">
+    <meta name="description" content="本科 | 软件开发 | 后端 | Java ">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google-site-verification" content="pBWoGvVEP36FzzS4xIpoMejc5UKi3RKcxd9rWWcjiDg" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>JavaSE_第1章 Java概述 | Lucky阳</title>
+
+    <link rel="icon" type="image/png" href="https://myhexo-blog.oss-cn-shenzhen.aliyuncs.com/bolg-images/BlogHeadPortrait.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?aaa6c944b0ed07922901d7fc571a171d";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
+    </script>
+<meta name="generator" content="Hexo 5.2.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="Lucky阳" type="application/atom+xml">
+</head>
+
+
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="https://myhexo-blog.oss-cn-shenzhen.aliyuncs.com/bolg-images/BlogHeadPortrait.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">Lucky阳</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="" class="waves-effect waves-light">
+
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a href="/census">
+          
+          <i class="fas fa-layer-group" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>统计</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/archives">
+          
+          <i class="fas fa-paper-plane" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>时轴</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/categories">
+          
+          <i class="fas fa-bookmark" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>分类</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/tags">
+          
+          <i class="fas fa-tag" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>标签</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/pdf">
+          
+          <i class="fas fa-file-pdf" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>PDF</span>
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="" class="waves-effect waves-light">
+
+      
+      <i class="fas fa-heartbeat" style="zoom: 0.6;"></i>
+      
+      <span>清单</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a href="/List/music">
+          
+          <i class="fas fa-music" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>音乐</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/List/galleries">
+          
+          <i class="fas fa-image" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>相册</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/List/movies">
+          
+          <i class="fas fa-film" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>视频</span>
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-envelope" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tools" class="waves-effect waves-light">
+      
+      <i class="fas fa-suitcase" style="zoom: 0.6;"></i>
+      
+      <span>百宝箱</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/Windows" class="waves-effect waves-light">
+      
+      <i class="fas fa-desktop" style="zoom: 0.6;"></i>
+      
+      <span>Windows</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-link" style="zoom: 0.6;"></i>
+      
+      <span>友链</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="https://myhexo-blog.oss-cn-shenzhen.aliyuncs.com/bolg-images/BlogHeadPortrait.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">Lucky阳</div>
+        <div class="logo-desc">
+            
+            本科 | 软件开发 | 后端 | Java 
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fa-fw fas fa-archive"></i>
+			
+			归档
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a href="/census " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-layer-group" style="position: absolute;left:50px" ></i>
+			      
+		          <span>统计</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/archives " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-paper-plane" style="position: absolute;left:50px" ></i>
+			      
+		          <span>时轴</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/categories " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-bookmark" style="position: absolute;left:50px" ></i>
+			      
+		          <span>分类</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/tags " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-tag" style="position: absolute;left:50px" ></i>
+			      
+		          <span>标签</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/pdf " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-file-pdf" style="position: absolute;left:50px" ></i>
+			      
+		          <span>PDF</span>
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fa-fw fas fa-heartbeat"></i>
+			
+			清单
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a href="/List/music " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-music" style="position: absolute;left:50px" ></i>
+			      
+		          <span>音乐</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/List/galleries " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-image" style="position: absolute;left:50px" ></i>
+			      
+		          <span>相册</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/List/movies " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-film" style="position: absolute;left:50px" ></i>
+			      
+		          <span>视频</span>
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-envelope"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tools" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-suitcase"></i>
+			
+			百宝箱
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/Windows" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-desktop"></i>
+			
+			Windows
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-link"></i>
+			
+			友链
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/Luckycxy1217/" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/Luckycxy1217/" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/posts/20200928012804.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">JavaSE_第1章 Java概述</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        background-color: white;
+        width: 345px;
+        padding-left: 20px;
+        border-radius: 10px;
+        box-shadow: 0 10px 35px 2px rgba(0, 0, 0, .15), 0 5px 15px rgba(0, 0, 0, .07), 0 2px 5px -5px rgba(0, 0, 0, .1) !important;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+    
+    #toc-content {
+        height: calc(100vh - 300px);
+        overflow: scroll;
+
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+        bottom: 120px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/JavaSE/">
+                                <span class="chip bg-color">JavaSE</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E5%90%8E%E7%AB%AF%E7%AF%87/" class="post-category">
+                                后端篇
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2022-06-14
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2022-07-20
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    7k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    25 分
+                </div>
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="JavaSE-第1章-Java概述"><a href="#JavaSE-第1章-Java概述" class="headerlink" title="JavaSE_第1章 Java概述"></a>JavaSE_第1章 Java概述</h1><h2 id="学习目标"><a href="#学习目标" class="headerlink" title="学习目标"></a>学习目标</h2><ul>
+<li><input disabled="" type="checkbox"> 理解Java语言的跨平台实现原理</li>
+<li><input disabled="" type="checkbox"> 理解JDK/JRE/JVM的组成和作用</li>
+<li><input disabled="" type="checkbox"> 能够参照笔记配置环境变量</li>
+<li><input disabled="" type="checkbox"> 能够编写HelloWorld程序编译并执行</li>
+</ul>
+<h2 id="1-1-JavaSE课程体系介绍"><a href="#1-1-JavaSE课程体系介绍" class="headerlink" title="1.1 JavaSE课程体系介绍"></a>1.1 JavaSE课程体系介绍</h2><p>见《第一个阶段课程体系介绍.xmind》</p>
+<h2 id="1-2-计算机语言概述"><a href="#1-2-计算机语言概述" class="headerlink" title="1.2 计算机语言概述"></a>1.2 计算机语言概述</h2><p>Java是一种计算机编程语言。</p>
+<h3 id="1、计算机语言是什么"><a href="#1、计算机语言是什么" class="headerlink" title="1、计算机语言是什么"></a>1、计算机语言是什么</h3><p>所谓计算机编程语言，就是人们可以使用编程语言对计算机下达命令，让计算机完成人们需要的功能。</p>
+<h3 id="2、计算机语言发展"><a href="#2、计算机语言发展" class="headerlink" title="2、计算机语言发展"></a>2、计算机语言发展</h3><ul>
+<li>第一代：机器语言<ul>
+<li>1946年2月14日，世界上第一台计算机ENAC诞生，使用的是最原始的穿孔卡片。这种卡片上使用的语言是只有专家才能理解的语言，它是用二进制代码表示的语言，与人类语言差别极大，这种语言就称为机器语言。机器语言是第一代计算机语言。这种语言本质上是计算机能识别的唯一语言，人类很难理解。以后的语言就是在这个的基础上简化而来。虽然后来发展的语言能让人类直接理解但最终送入计算机的还是这种机器语言。</li>
+</ul>
+</li>
+<li>第二代：汇编语言<ul>
+<li>计算机语言发展到第二代，出现了汇编语言。汇编语言用助记符代替了操作码，用地址符号或标号代替地址码。这样就用符号代替了机器语言的二进制码。汇编语言也称为符号语言。汇编语言是面向机器的，能直接与存储器、接口电路打交道，也能申请中断，因此汇编语言程序能直接管理和控制硬件设备。程序设计人员必须对计算机有相当深入的了解，才能使用汇编语言编制程序。汇编语言缺乏通用性，程序不易移植。不同计算机的汇编语言之间是不能通用的，因为它们各自都有适合于自己机型特点的汇编语言。但是，掌握了一种计算机的汇编语言，有助于学习其他计算机的汇编语言。比起机器语言，汇编大大进步了。尽管还是复杂，用起来容易出错，但在计算机语言发展史上是机器语言向更高级的语言进化的桥梁。</li>
+</ul>
+</li>
+<li>第三代：高级语言<ul>
+<li>当计算机语言发展到第三代时，就进入了“面向人类”的高级语言。高级语言是一种接近于人们使用习惯的程序设计语言。它允许用英文写计算程序，程序中的符号和算式也与日常用的数学式子差不多。高级语言发展于20世纪50年代中叶到70年代，流行的高级语言已经开始固化在计算机内存里了，比如 Basic语言。现在，计算机语言仍然在不断的发展，种类也相当多，比如 FORTRAN语言， COBOL语言，C语言，C++，C#， PASCAL，Java，Python等等。高级语言接近于自然语言和数学语言，容易为人们掌握；独立于机器，有一定的通用性；计算机不能直接识别和执行用高级语言编写的程序，需要使用编译器或者解释器，转换为机器语言才能被识别和执行；用高级语言编写的程序大大提高了编写效率。</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://myhexo-blog.oss-cn-shenzhen.aliyuncs.com/bolg-images/image-20211218092630678.png" alt="image-20211218092630678"></p>
+<p><img src="https://myhexo-blog.oss-cn-shenzhen.aliyuncs.com/bolg-images/image-20211218092541075.png" alt="image-20211218092541075"></p>
+<h3 id="3、计算机语言分类"><a href="#3、计算机语言分类" class="headerlink" title="3、计算机语言分类"></a>3、计算机语言分类</h3><p><img src="https://myhexo-blog.oss-cn-shenzhen.aliyuncs.com/bolg-images/image-20211218091234964.png" alt="image-20211218091234964"></p>
+<h3 id="4、计算机语言排行榜"><a href="#4、计算机语言排行榜" class="headerlink" title="4、计算机语言排行榜"></a>4、计算机语言排行榜</h3><p>TIOBE排行榜是根据互联网上有经验的程序员、课程和第三方厂商的数量，并使用搜索引擎（如Google、Bing、Yahoo!）以及Wikipedia、Amazon、YouTube和Baidu等统计出的排名数据。</p>
+<p><img src="https://myhexo-blog.oss-cn-shenzhen.aliyuncs.com/bolg-images/image-20211216101948388.png" alt="image-20211216101948388"></p>
+<p>计算机语言走势</p>
+<p><img src="https://myhexo-blog.oss-cn-shenzhen.aliyuncs.com/bolg-images/image-20211218142330176.png" alt="image-20211218142330176"></p>
+<h2 id="1-3-Java语言概述"><a href="#1-3-Java语言概述" class="headerlink" title="1.3 Java语言概述"></a>1.3 Java语言概述</h2><h3 id="1、Java语言发展历史"><a href="#1、Java语言发展历史" class="headerlink" title="1、Java语言发展历史"></a>1、Java语言发展历史</h3><p>Java诞生于SUN（Stanford University Network），09年SUN被Oracle（甲骨文）收购。</p>
+<p>Java之父是詹姆斯.高斯林(James Gosling)。</p>
+<p><img src="https://myhexo-blog.oss-cn-shenzhen.aliyuncs.com/bolg-images/image-20210727085728848.png" alt="image-20210727085728848"></p>
+<p>1996年发布JDK1.0版。</p>
+<p>目前最新的版本是Java17。我们学习的Java8。</p>
+<p>将Java取名的是Sun公司的马克 奥颇门（Mark Opperman）。马克 奥颇门是在一家咖啡店与同事品尝咖啡时得到灵感的。Java是印度尼西亚爪哇岛的英文名称，因盛产咖啡而闻名。国外的许多咖啡店用Java来命名或宣传，以彰显其咖啡的品质。Java语言中的许多库类名称，多与咖啡有关，如JavaBeans（咖啡豆）、NetBeans（网络豆）以及ObjectBeans （对象豆）等等。Java使Sun市值大升，一度超过2千亿美元。所有的网络巨头公司为之一振，IBM、HP、微软为Java配置了专门的开发团队，全球几百万软件工程师眷顾于Java，着迷于Java。1982年 Sun公司成立。1986年 Sun公司上市。1995年 Sun公司推出著名的Java编程语言。Sun公司的位置非常像微机争霸战中的苹果公司。它有自己成套的硬件和操作系统，但是它缺乏应用软件。2001年 “9.11”以前，Sun公司市值超过1000亿美元；此后，互联网泡沫破裂，硬件需求大幅减少，它的市值在一个月之内跌幅超过90%。SUN公司的成长用了20年，而衰落只用了1年！</p>
+<table>
+<thead>
+<tr>
+<th align="center">发行版本</th>
+<th align="center">发行时间</th>
+<th align="center">备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">Java</td>
+<td align="center">1995.05.23</td>
+<td align="center">Sun公司在Sun world会议上正式发布Java和HotJava浏览器</td>
+</tr>
+<tr>
+<td align="center">Java 1.0</td>
+<td align="center">1996.01.23</td>
+<td align="center">Sun公司发布了Java的第一个开发工具包</td>
+</tr>
+<tr>
+<td align="center">Java 1.1</td>
+<td align="center">1997.02.19</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">Java 1.2</td>
+<td align="center">1998.12.08</td>
+<td align="center">拆分成：J2SE（标准版）、J2EE（企业版）、J2ME（小型版）</td>
+</tr>
+<tr>
+<td align="center">Java 1.3</td>
+<td align="center">2000.05.08</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">Java1.4</td>
+<td align="center">2004.02.06</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><strong>Java 5.0</strong></td>
+<td align="center">2004.09.30</td>
+<td align="center">①版本号从1.4直接更新至5.0；②平台更名为JavaSE、JavaEE、JavaME</td>
+</tr>
+<tr>
+<td align="center">Java 6.0</td>
+<td align="center">2006.12.11</td>
+<td align="center">2009.04.20 Oracle宣布收购SUN公司</td>
+</tr>
+<tr>
+<td align="center">Java 7.0</td>
+<td align="center">2011.07.02</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><strong>Java 8.0</strong></td>
+<td align="center">2014.03.18</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">Java 9.0</td>
+<td align="center">2017.09.22</td>
+<td align="center">①每半年更新一次；②Java 9.0开始不再支持windows 32位系统</td>
+</tr>
+<tr>
+<td align="center">Java 10.0</td>
+<td align="center">2018.03.21</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><strong>Java 11.0</strong></td>
+<td align="center">2018.09.25</td>
+<td align="center">JDK安装包取消独立JRE安装包，长期支持版本</td>
+</tr>
+<tr>
+<td align="center">Java 12.0</td>
+<td align="center">2019.03.19</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">Java 13.0</td>
+<td align="center">2019.9.18</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">Java 14.0</td>
+<td align="center">2020.3.17</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">Java 15.0</td>
+<td align="center">2020.9</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">Java16.0</td>
+<td align="center">2021.3</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><strong>Java17.0</strong></td>
+<td align="center">2021.9</td>
+<td align="center">最新的长期支持版本</td>
+</tr>
+</tbody></table>
+<h3 id="2、Java是最好的语言吗？"><a href="#2、Java是最好的语言吗？" class="headerlink" title="2、Java是最好的语言吗？"></a>2、Java是最好的语言吗？</h3><p><img src="https://myhexo-blog.oss-cn-shenzhen.aliyuncs.com/bolg-images/image-20211217093810302.png" alt="image-20211217093810302"></p>
+<p>不是，因为在每个领域都有更合适的编程语言。</p>
+<ul>
+<li>C 语言无疑是现代计算机软件编程语言的王者，几乎所有的操作系统都是 C 语言写成的。C语言是面向过程的编程语言。</li>
+<li>C++ 是面向对象的 C 语言，一直在不断的改进。为了与C兼容，C++被迫做出了很多重大的设计妥协，结果导致语言过分华丽，过分复杂。为了与C兼容，C++并没有采用自动内存管理的策略，从而丧失了修正C最严重问题的机会。另外C++的OO设计耦合度过高，导致组件之间出现很厚的粘合层，并且带来了严重的可维护性问题。C++的应用主要集中在GUI（图形化界面）、游戏和多媒体工具包方面，其他地方很少用到。</li>
+<li>C#是.NET开发平台的主语言。.NET开发平台包括虚拟机CLR、公共类库以及编译工具等开发环境，它是Java语言强有力的竞争对手。但是.NET环境只有Windows有。</li>
+<li>Visual Basic主要用于图形化界面程序的设计，目前也是基于.NET平台。</li>
+</ul>
+<ul>
+<li>JavaScript 是能运行在浏览器中的语言，丰富的前端界面离不开 Javascript 的功劳。近年来的 Node.js 又在后端占有一席之地。</li>
+<li>Python 用于系统管理，并通过高性能预编译的库，提供 API 来进行科学计算，文本处理等，是 Linux 必选的解释性语言。Python的应用方向主要是数据分析、人工智能和机器学习、网络爬虫、自动化测试、web开发、科学计算和统计等。Python的优势是语法简洁清晰，也具有丰富和强大的类库。但是Python更像是胶水语言，它通常用于将其他语言（尤其是C/C++）制作的各种模块轻松的联结在一起。而且Python的运行效率非常低。</li>
+<li>PHP是一种通用开源脚本语言。PHP是在服务器端执行的脚本语言。PHP独特的语法混合了C、Java、Perl以及 PHP 自创的语法。利于学习，使用广泛，主要适用于Web开发领域。LAMP（Linux+Apache+MySQL+PHP）免费套装让很多创业公司可以实现快速低成本的搭建公司网站。虽然 PHP语言使用简单，但是一直有安全漏洞问题要解决。多线程支持不好，性能低下，代码不规范等问题。行业领跑者们从着眼未来考虑，在大数据、物联网、人工智能等方面的广泛应用前景下，对待PHP的重视程度就逐渐下降了。</li>
+<li>Ruby 强于 DSL（领域特定语言），程序员可以定义丰富的语义来充分表达自己的思想。</li>
+<li>Erlang 就是为分布式计算设计的，能保证在大规模并发访问的情况下，保持强壮和稳定性。</li>
+<li>Go 语言内置了并发能力，可以编译成本地代码。当前新的网络相关项目，很大比例是由 Go 语言编写的，如 Docker、Kubernetes 等。</li>
+<li>函数式编程有 Lisp，编写 iOS 程序有 Swift/Objective-C。</li>
+<li>R的思想是：它可以提供一些集成的统计工具，但更大量的是它提供各种数学计算、统计计算的函数，从而使使用者能灵活机动的进行数据分析，甚至创造出符合需要的新的统计计算方法 </li>
+<li>SQL 是用于访问和处理关系型数据库的标准语言， 这类数据库包括：MySQL，Oracle, SQL Server, DB2, PostgreSQL，Sybase, Access 等等 </li>
+</ul>
+<p>一句话概括，<strong>能留在排行榜之上的语言，都是好的语言，在其所在的领域能做到最好。</strong></p>
+<h3 id="3、Java语言的特点"><a href="#3、Java语言的特点" class="headerlink" title="3、Java语言的特点"></a>3、Java语言的特点</h3><p>（1）<strong>优点</strong></p>
+<ul>
+<li><strong>面向对象：</strong>Java语言支持封装、继承、多态，面向对象编程，让程序更好达到<code>高内聚</code>，<code>低耦合</code>的标准。</li>
+<li><strong>支持分布式：</strong>Java语言支持Internet应用的开发，在基本的Java应用编程接口中有一个网络应用编程接口（java net），它提供了用于网络应用编程的类库，包括URL、URLConnection、Socket、ServerSocket等。Java的RMI（远程方法激活）机制也是开发分布式应用的重要手段。</li>
+<li><strong>健壮型：</strong>Java的强类型机制、异常处理、垃圾的自动收集等是Java程序健壮性的重要保证。对指针的丢弃是Java的明智选择。</li>
+<li><strong>安全性高：</strong>Java通常被用在网络环境中，为此，Java提供了一个安全机制以防恶意代码的攻击。如：安全防范机制（类ClassLoader），如分配不同的名字空间以防替代本地的同名类、字节代码检查。</li>
+<li><strong>跨平台性：</strong>Java程序（后缀为java的文件）在Java平台上被编译为体系结构中立的字节码格式（后缀为class的文件），然后可以在实现这个Java平台的任何系统中运行。</li>
+</ul>
+<p>（2）<strong>缺点</strong></p>
+<ul>
+<li>语法过于复杂，严谨，对程序员的约束比较多，与python和php等相比入门相对较难。但是一旦学会了，就业岗位需求量大，而且薪资待遇节节攀升。</li>
+<li>一般适用于大型网站开发，整个架构会比较重，对于初创公司开发和维护人员的成本比较高（即薪资高），选择用Java语言开发网站或应用系统的需要一定的经济实力。</li>
+</ul>
+<h3 id="4、Java生态圈"><a href="#4、Java生态圈" class="headerlink" title="4、Java生态圈"></a>4、Java生态圈</h3><p>根据2020年IDC（Internet Data Center互联网数据中心）的最新报告《Java迎来25岁》，超过900万的开发人员代表全球69%的全职开发人员使用Java——比其他任何语言都多。</p>
+<p><strong>Java是目前应用最为广泛的软件开发平台之一。</strong>随着Java以及Java社区的不断壮大，Java 也早已不再是简简单单的一门计算机语言了，它更是一个平台、一种文化、一个社区。</p>
+<p><strong>作为一个平台，</strong>Java虚拟机扮演着举足轻重的作用。除了 Java语言，任何一种能够被编译成字节码的计算机语言都属于Java这个平台。Groovy、Scala、 JRuby、Kotlin等都是Java平台的一部分，它们依赖于Java虚拟机，同时，Java平台也因为它们变得更加丰富多彩。</p>
+<p><strong>作为一种文化，</strong>Java几乎成为了 “开源”的代名词。在Java程序中，有着数不清的开源软件和框架。如Tomcat、Struts, Hibernate, Spring,MyBatis等。就连JDK和JVM自身也有不少开源的实现，如OpenJDK、Apache Harmony。可以说，“共享”的精神在Java世界里体现得淋漓尽致。</p>
+<p><strong>作为一个社区，</strong>Java拥有全世界最多的技术拥护者和开源社区支持，有数不清的论坛和资料。从桌面应用软件、嵌入式开发到企业级应用、后台服务器、中间件，都可以看到Java的身影。其应用形式之复杂、参与人数之众多也令人咋舌。可以说，Java社区已经俨然成为了一个良好而庞大的生态系统。<strong>其实这才是Java最大的优势和财富。</strong></p>
+<h3 id="5、Java技术体系平台"><a href="#5、Java技术体系平台" class="headerlink" title="5、Java技术体系平台"></a>5、Java技术体系平台</h3><ul>
+<li>JavaSE（Java Platform, Standard Edition标准版）：允许您在桌面和服务器上开发和部署Java应用程序。Java提供了丰富的用户界面、性能、多功能性、可移植性和当今应用程序所需的安全性。</li>
+<li>JavaEE（Java Platform, Enterprise Edition企业版）：是为开发企业环境下的应用程序提供的一套解决方案，主要针对于Web应用程序开发。</li>
+<li>JavaME（Java Platform, Micro Edition 小型版）：为互联网上的嵌入式和移动设备上运行的应用提供了一个健壮、灵活的环境：微控制器、传感器、网关、移动电话、个人数字助理（PDA）、电视机顶盒、打印机等等。JavaME包括灵活的用户界面、健壮的安全性、内置的网络协议，以及支持动态下载的网络和离线应用程序。基于JavaME的应用程序在许多设备上都是可移植的，但是利用了每个设备的本机功能。<ul>
+<li>Java Embedded: 用于解锁物联网的智能设备的价值：<br>通过远程市场更新和刷新功能延长产品生命周期和价值；<br>利用Java的可伸缩性、健壮性、可移植性和全套功能，提高生产效率，降低成本，缩短上市时间；<br>在边缘启用快速数据功能；</li>
+<li>Java Card：使安全元件（如智能卡和其他防篡改安全芯片）能够承载采用Java技术的应用程序。Java card提供了一个安全的、可互操作的执行平台，它可以在一个资源受限的设备上存储和更新多个应用程序，同时保持最高的认证级别和与标准的兼容性。</li>
+<li>Java TV：是一种基于JavaME的技术，它为开发在tv和机顶盒设备上运行的java应用程序提供了一个性能良好、安全且易于实现的解决方案。使用Java TV运行时，开发人员可以轻松创建应用程序，例如电子节目指南（EPG）、视频点播（VOD）客户端、游戏和教育应用程序、用于访问Internet数据的应用程序（例如天气、新闻播报器、社交网络）以及大多数蓝光光盘标题上的用户界面和奖金内容。</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://myhexo-blog.oss-cn-shenzhen.aliyuncs.com/bolg-images/image-20211217114313652.png" alt="image-20211217114313652"></p>
+<p><img src="https://myhexo-blog.oss-cn-shenzhen.aliyuncs.com/bolg-images/image-20211218093009884.png" alt="image-20211218093009884"></p>
+<h2 id="1-4-Java语言跨平台原理（理解）"><a href="#1-4-Java语言跨平台原理（理解）" class="headerlink" title="1.4 Java语言跨平台原理（理解）"></a>1.4 Java语言跨平台原理（理解）</h2><h3 id="1、Java语言跨平台原理"><a href="#1、Java语言跨平台原理" class="headerlink" title="1、Java语言跨平台原理"></a>1、Java语言跨平台原理</h3><p>很多时候，我们写的程序可能要在多个操作系统运行，这个时候就要求我们的程序需要在尽可能不改动的情况下完实现这个目标。不同的语言实现跨平台的方式不同。Java语言实现跨平台是建立在“虚拟机”基础之上的。</p>
+<p>在Java出现之前，最为流行的编程语言是C和C++。如果我们想要在一台使用x86_64指令集的CPU的机器（如个人PC）上运行一个C语言程序，就需要编写一个将C语言翻译成x86_64汇编语言的编译器。如果想要在一台使用arm指令集的CPU的机器（如苹果手机）上，运行一个C语言程序，同样需要编写一个将C语言翻译成arm汇编语言的编译器。这样严重影响了C程序的跨平台性，因为针对特定的指令集开发编译器是一个难度非常大的工作。</p>
+<p><img src="https://myhexo-blog.oss-cn-shenzhen.aliyuncs.com/bolg-images/image-20210625083023734.png" alt="image-20210625083023734"></p>
+<p>那么Java是如何解决这个问题的呢？Java设计了一套简洁的虚拟指令集，也就是字节码。如果我们想要在一台机器上运行Java程序，只需要将Java程序编译成字节码就可以了。编写一个将Java程序翻译成Java字节码的编译器，比起编写一个将Java程序翻译成x86_64指令集的编译器来说，要简单得多。可是这里产生了一个问题，难道我们的机器可以直接执行字节码这样的虚拟指令集吗？当然是不能的。我们需要针对不同的指令集，开发对应的字节码解释器。这个工作同样比较简单。</p>
+<p><img src="https://myhexo-blog.oss-cn-shenzhen.aliyuncs.com/bolg-images/image-20210625083051577.png" alt="image-20210625083051577"></p>
+<p>Java虚拟机（JVM，Java Virtual Machine）是由软件技术模拟出计算机运行的一个虚拟的计算机，它负责解释执行字节码指令集。也就是说，只要一台机器可以运行Java的虚拟机，那么就能运行Java语言编写的程序。而不同的平台，需要安装不同的Java虚拟机程序。那么我们编写完Java程序之后，需要先将.java的源文件编译为.class的字节码文件，然后在Java虚拟机中来执行这些字节码文件。</p>
+<p><img src="https://myhexo-blog.oss-cn-shenzhen.aliyuncs.com/bolg-images/image-20210625083140531.png" alt="image-20210625083140531"></p>
+<p>Java虚拟机的设计不仅仅解决了Java程序跨平台的问题，同时解决了很多语言的跨平台问题。</p>
+<p><img src="https://myhexo-blog.oss-cn-shenzhen.aliyuncs.com/bolg-images/image-20210625083156633.png" alt="image-20210625083156633"></p>
+<ul>
+<li>C++不受虚拟机的限制，但是需要用不同平台的编译器重新编译一次。需要编写n个版本的编译器。</li>
+<li>Java虚拟机可以配置在MacOS，Windows（PC操作系统）,Linux等上，但是不能配置在WP（Windows Phone），IOS（移动操作系统）上，只能配置在android（移动操作系统）。Java程序可以实现一次编译处处运行。</li>
+</ul>
+<p><img src="https://myhexo-blog.oss-cn-shenzhen.aliyuncs.com/bolg-images/image-20211217111217831.png" alt="image-20211217111217831"></p>
+<h3 id="2、JVM、JRE、JDK的关系"><a href="#2、JVM、JRE、JDK的关系" class="headerlink" title="2、JVM、JRE、JDK的关系"></a>2、JVM、JRE、JDK的关系</h3><ul>
+<li><strong>JVM</strong>（Java Virtual Machine ）：Java虚拟机，是运行所有Java程序的假想计算机，是Java程序的运行环境之一，也是Java 最具吸引力的特性之一。我们编写的Java代码，都运行在<strong>JVM</strong> 之上。</li>
+<li>**JRE ** (Java Runtime Environment) ：是Java程序的运行时环境，包含<code>JVM</code> 和运行时所需要的<code>核心类库</code>。</li>
+<li><strong>JDK</strong>  (Java Development’s Kit)：是Java程序开发工具包，包含<code>JRE</code> 和开发人员使用的工具。</li>
+</ul>
+<p>我们想要运行一个已有的Java程序，那么只需安装<code>JRE</code> 即可。</p>
+<p>我们想要开发一个全新的Java程序，那么必须安装<code>JDK</code> ，其内部包含<code>JRE</code>。</p>
+<p><img src="https://myhexo-blog.oss-cn-shenzhen.aliyuncs.com/bolg-images/JDKJRE.jpg"></p>
+<p><img src="https://myhexo-blog.oss-cn-shenzhen.aliyuncs.com/bolg-images/JDKJREJVM.png" alt="1561383524152"></p>
+<h2 id="1-5-开发环境搭建（掌握）"><a href="#1-5-开发环境搭建（掌握）" class="headerlink" title="1.5 开发环境搭建（掌握）"></a>1.5 开发环境搭建（掌握）</h2><h3 id="1、JDK的下载"><a href="#1、JDK的下载" class="headerlink" title="1、JDK的下载"></a>1、JDK的下载</h3><ul>
+<li><p>下载网址：<a target="_blank" rel="noopener" href="http://www.oracle.com/">www.oracle.com</a> </p>
+</li>
+<li><p>下载步骤：</p>
+<ul>
+<li><p>登录Oracle公司官网，<a href="http://www.oracle.com，如图所示：在底部选择Developers开发者">www.oracle.com，如图所示：在底部选择Developers开发者</a></p>
+<p><img src="https://myhexo-blog.oss-cn-shenzhen.aliyuncs.com/bolg-images/%E4%B8%8B%E8%BD%BD1.png" alt="1572254490435"></p>
+</li>
+<li><p>在<strong>Developers</strong>页面中间的技术分类部分，选择<code>Java</code>，单击进入，如图所示：</p>
+<p><img src="https://myhexo-blog.oss-cn-shenzhen.aliyuncs.com/bolg-images/image-20211019110551338.png" alt="image-20211019110551338"></p>
+<p>展示的是最新Java版本，例如Java17。单击Download Java，然后选择具体的版本下载。</p>
+<p><img src="https://myhexo-blog.oss-cn-shenzhen.aliyuncs.com/bolg-images/image-20211019110843394.png" alt="image-20211019110843394"></p>
+</li>
+<li><p>选择Download Java按钮后</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://myhexo-blog.oss-cn-shenzhen.aliyuncs.com/bolg-images/image-20211019111110242.png" alt="image-20211019111110242"></p>
+<p><img src="https://myhexo-blog.oss-cn-shenzhen.aliyuncs.com/bolg-images/image-20211019111150970.png" alt="image-20211019111150970"></p>
+<p><img src="https://myhexo-blog.oss-cn-shenzhen.aliyuncs.com/bolg-images/image-20211019111209831.png" alt="image-20211019111209831"></p>
+<p>选择<strong>Accept License Agreement</strong>，</p>
+<p><img src="https://myhexo-blog.oss-cn-shenzhen.aliyuncs.com/bolg-images/image-20211019111252989.png" alt="image-20211019111252989"></p>
+<p>注册或登录后下载</p>
+<p><img src="https://myhexo-blog.oss-cn-shenzhen.aliyuncs.com/bolg-images/image-20211019111922387.png" alt="image-20211019111922387"></p>
+<h3 id="2、JDK的安装"><a href="#2、JDK的安装" class="headerlink" title="2、JDK的安装"></a>2、JDK的安装</h3><ul>
+<li><p>安装步骤：</p>
+<ul>
+<li><p>双击<code>jdk-8u202-windows-x64.exe</code>文件，并单击<code>下一步</code>，如图所示：</p>
+<p><img src="https://myhexo-blog.oss-cn-shenzhen.aliyuncs.com/bolg-images/jdk1.jpg"></p>
+</li>
+<li><p>取消独立JRE的安装，单击<code>公共JRE前的下拉列表</code>，选择<code>此功能将不可用</code>如图所示：</p>
+<p><img src="https://myhexo-blog.oss-cn-shenzhen.aliyuncs.com/bolg-images/jdk2.jpg"></p>
+</li>
+<li><p>修改安装路径，单击更改，如图所示：</p>
+<p><img src="https://myhexo-blog.oss-cn-shenzhen.aliyuncs.com/bolg-images/jdk3.jpg"></p>
+</li>
+<li><p>将安装路径修改为<code>D:\develop\Java\jdk1.8.0_202\</code>，并单击确定，如图所示：</p>
+<p><img src="https://myhexo-blog.oss-cn-shenzhen.aliyuncs.com/bolg-images/jdk4.jpg"></p>
+</li>
+<li><p>单击下一步，如图所示：</p>
+<p><img src="https://myhexo-blog.oss-cn-shenzhen.aliyuncs.com/bolg-images/jdk5.jpg"></p>
+</li>
+<li><p>稍后几秒，安装完成，如图所示：</p>
+<p><img src="https://myhexo-blog.oss-cn-shenzhen.aliyuncs.com/bolg-images/jdk6.jpg"></p>
+</li>
+<li><p>目录结构，如图所示：</p>
+<p><img src="https://myhexo-blog.oss-cn-shenzhen.aliyuncs.com/bolg-images/jdk7.png" alt="1561386792819"></p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="3、配置环境变量"><a href="#3、配置环境变量" class="headerlink" title="3、配置环境变量"></a>3、配置环境变量</h3><p>为什么配置path？</p>
+<p>希望在命令行使用javac.exe等工具时，任意目录下都可以找到这个工具所在的目录。</p>
+<p>例如：我们在C:\Users\Irene目录下使用java命令，结果如下：</p>
+<p><img src="https://myhexo-blog.oss-cn-shenzhen.aliyuncs.com/bolg-images/1572317249341.png" alt="1572317249341"></p>
+<p>我们在JDK的安装目录的bin目录下使用java命令，结果如下：</p>
+<p><img src="https://myhexo-blog.oss-cn-shenzhen.aliyuncs.com/bolg-images/1572317330332.png" alt="1572317330332"></p>
+<p>我们不可能每次使用java.exe，javac.exe等工具的时候都进入到JDK的安装目录下，太麻烦了。我们希望在任意目录下都可以使用JDK的bin目录的开发工具，因此我们需要告诉操作系统去哪里找这些开发工具，这就需要配置path环境变量。</p>
+<h4 id="方案一：只配置path"><a href="#方案一：只配置path" class="headerlink" title="方案一：只配置path"></a>方案一：只配置path</h4><ul>
+<li><p>步骤：</p>
+<ul>
+<li><p>打开桌面上的计算机，进入后在左侧找到<code>计算机</code>，单击鼠标<code>右键</code>，选择<code>属性</code>，如图所示：</p>
+<p><img src="https://myhexo-blog.oss-cn-shenzhen.aliyuncs.com/bolg-images/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F1.jpg"></p>
+</li>
+<li><p>选择<code>高级系统设置</code>，如图所示：</p>
+<p><img src="https://myhexo-blog.oss-cn-shenzhen.aliyuncs.com/bolg-images/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F2.jpg"></p>
+</li>
+<li><p>在<code>高级</code>选项卡，单击<code>环境变量</code>，如图所示：</p>
+<p><img src="https://myhexo-blog.oss-cn-shenzhen.aliyuncs.com/bolg-images/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F3.jpg"></p>
+</li>
+<li><p>在<code>系统变量</code>中，选中<code>Path</code> 环境变量，<code>双击</code>或者<code>点击编辑</code> ,如图所示：</p>
+<p><img src="https://myhexo-blog.oss-cn-shenzhen.aliyuncs.com/bolg-images/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F6.jpg"></p>
+</li>
+<li><p>在变量值的最前面，键入<code>D:\develop\Java\jdk1.8.0_202\bin;</code>  分号必须要写，而且还要是<strong>英文符号</strong>。如图所示：</p>
+<p><img src="https://myhexo-blog.oss-cn-shenzhen.aliyuncs.com/bolg-images/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F9.png" alt="1561386643207"></p>
+</li>
+<li><p>环境变量配置完成，<strong>重新开启</strong>DOS命令行，在任意目录下输入<code>javac</code> 命令，运行成功。</p>
+<p><img src="https://myhexo-blog.oss-cn-shenzhen.aliyuncs.com/bolg-images/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F8.jpg"></p>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="方案二：配置JAVA-HOME-path"><a href="#方案二：配置JAVA-HOME-path" class="headerlink" title="方案二：配置JAVA_HOME+path"></a>方案二：配置JAVA_HOME+path</h4><ul>
+<li><p>步骤：</p>
+<ul>
+<li><p>打开桌面上的计算机，进入后在左侧找到<code>计算机</code>，单击鼠标<code>右键</code>，选择<code>属性</code>，如图所示：</p>
+<p><img src="https://myhexo-blog.oss-cn-shenzhen.aliyuncs.com/bolg-images/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F1.jpg"></p>
+</li>
+<li><p>选择<code>高级系统设置</code>，如图所示：</p>
+<p><img src="https://myhexo-blog.oss-cn-shenzhen.aliyuncs.com/bolg-images/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F2.jpg"></p>
+</li>
+<li><p>在<code>高级</code>选项卡，单击<code>环境变量</code>，如图所示：</p>
+<p><img src="https://myhexo-blog.oss-cn-shenzhen.aliyuncs.com/bolg-images/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F3.jpg"></p>
+</li>
+<li><p>在<code>系统变量</code>中，单击<code>新建</code> ，创建新的环境变量，如图所示：</p>
+<p><img src="https://myhexo-blog.oss-cn-shenzhen.aliyuncs.com/bolg-images/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F4.jpg"></p>
+</li>
+<li><p>变量名输入<code>JAVA_HOME</code>，变量值输入 <code>D:\develop\Java\jdk1.8.0_202</code> ，并单击<code>确定</code>，如图所示：</p>
+<p><img src="https://myhexo-blog.oss-cn-shenzhen.aliyuncs.com/bolg-images/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F5.jpg"></p>
+</li>
+<li><p>选中<code>Path</code> 环境变量，<code>双击</code>或者<code>点击编辑</code> ,如图所示：</p>
+<p><img src="https://myhexo-blog.oss-cn-shenzhen.aliyuncs.com/bolg-images/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F6.jpg"></p>
+</li>
+<li><p>在变量值的最前面，键入<code>%JAVA_HOME%\bin;</code>  分号必须要写，而且还要是<strong>英文符号</strong>。如图所示：</p>
+<p><img src="https://myhexo-blog.oss-cn-shenzhen.aliyuncs.com/bolg-images/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F7.jpg"></p>
+</li>
+<li><p>环境变量配置完成，<strong>重新开启</strong>DOS命令行，在任意目录下输入<code>javac</code> 命令，运行成功。</p>
+<p><img src="https://myhexo-blog.oss-cn-shenzhen.aliyuncs.com/bolg-images/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F8.jpg"></p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="1-6-入门程序HelloWorld（掌握）"><a href="#1-6-入门程序HelloWorld（掌握）" class="headerlink" title="1.6 入门程序HelloWorld（掌握）"></a>1.6 入门程序HelloWorld（掌握）</h2><h3 id="1-6-1-HelloWorld案例"><a href="#1-6-1-HelloWorld案例" class="headerlink" title="1.6.1 HelloWorld案例"></a>1.6.1 HelloWorld案例</h3><h4 id="1、程序开发步骤说明"><a href="#1、程序开发步骤说明" class="headerlink" title="1、程序开发步骤说明"></a>1、程序开发步骤说明</h4><p>JDK安装完毕，可以开发我们第一个Java程序了。</p>
+<p>Java程序开发三步骤：<strong>编写</strong>、<strong>编译</strong>、<strong>运行</strong>。</p>
+<p><img src="https://myhexo-blog.oss-cn-shenzhen.aliyuncs.com/bolg-images/%E5%BC%80%E5%8F%91%E6%AD%A5%E9%AA%A4.jpg" alt="开发步骤"></p>
+<h4 id="2、编写Java源程序保存-java源文件"><a href="#2、编写Java源程序保存-java源文件" class="headerlink" title="2、编写Java源程序保存.java源文件"></a>2、编写Java源程序保存.java源文件</h4><ol>
+<li><p>在<code>D:\atguigu\javaee\JavaSE20190624\code\day01_code</code> 目录下新建文本文件，完整的文件名修改为<code>HelloWorld.java</code>，其中文件名为<code>HelloWorld</code>，后缀名必须为==.java==。</p>
+</li>
+<li><p>用notepad++等文本编辑器打开（虽然是记事本也可以，但是不够没有关键字颜色标识，不利于初学者学习）</p>
+</li>
+<li><p>在文件中输入如下代码，并且==保存==：</p>
+</li>
+</ol>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">HelloWorld</span> <span class="token punctuation">{</span>
+  	<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    	<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"HelloWorld"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<blockquote>
+<p>友情提示：</p>
+<p>每个字母和符号必须与示例代码一模一样。</p>
+</blockquote>
+<p>第一个<code>HelloWord</code> 源程序就编写完成了，但是这个文件是程序员编写的，JVM是看不懂的，也就不能运行，因此我们必须将编写好的<code>Java源文件</code> 编译成JVM可以看懂的<code>字节码文件</code> ，也就是==.class==文件。</p>
+<h4 id="3、编译Java源文件生成-class字节码文件"><a href="#3、编译Java源文件生成-class字节码文件" class="headerlink" title="3、编译Java源文件生成.class字节码文件"></a>3、编译Java源文件生成.class字节码文件</h4><p>在DOS命令行中，<strong>进入</strong><code>D:\atguigu\javaee\JavaSE20190624\code\day01_code</code><strong>目录</strong>，使用<code>javac</code> 命令进行编译。</p>
+<p>方式一：使用文件资源管理器打开<code>D:\atguigu\javaee\JavaSE20190624\code\day01_code</code><strong>目录</strong>，然后在地址栏输入cmd。</p>
+<p><img src="https://myhexo-blog.oss-cn-shenzhen.aliyuncs.com/bolg-images/image-20211217110132270.png" alt="image-20211217110132270"></p>
+<p>方式二：在notepad++软件的文件菜单–&gt;打开所在文件夹–&gt;命令行（要求notepad++软件必须是用管理员权限启动的，否则会出现已经正确配置了环境变量，却仍然找不到javac命令的问题）</p>
+<p><img src="https://myhexo-blog.oss-cn-shenzhen.aliyuncs.com/bolg-images/image-20211217110203579.png" alt="image-20211217110203579"></p>
+<p>命令：</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">javac <span class="token class-name">Java</span>源文件名<span class="token punctuation">.</span>后缀名<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>举例：</p>
+<pre class="line-numbers language-none"><code class="language-none">javac HelloWorld.java<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><img src="https://myhexo-blog.oss-cn-shenzhen.aliyuncs.com/bolg-images/HelloWorld%E7%BC%96%E8%AF%91%E7%BB%93%E6%9E%9C.png" alt="1561387081272"></p>
+<p>编译成功后，命令行没有任何提示。打开<code>D:\atguigu\javaee\JavaSE20190624\code\day01_code</code>目录，发现产生了一个新的文件 <code>HelloWorld.class</code>，该文件就是编译后的文件，是Java的可运行文件，称为<strong>字节码文件</strong>，有了字节码文件，就可以运行程序了。 </p>
+<blockquote>
+<p>Java源文件的编译工具<code>javac.exe</code></p>
+</blockquote>
+<h4 id="4、运行Java程序"><a href="#4、运行Java程序" class="headerlink" title="4、运行Java程序"></a>4、运行Java程序</h4><p>在DOS命令行中，在字节码文件目录下，使用<code>java</code> 命令进行运行。</p>
+<p>命令：</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">java 主类名字<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>主类是指包含main方法的类，main方法是Java程序的入口：</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>举例：</p>
+<pre class="line-numbers language-none"><code class="language-none">java HelloWorld<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<blockquote>
+<p>友情提示：</p>
+<p>java HelloWord  不要写 不要写 不要写 .class</p>
+</blockquote>
+<p><img src="https://myhexo-blog.oss-cn-shenzhen.aliyuncs.com/bolg-images/HelloWorld%E8%BF%90%E8%A1%8C%E7%BB%93%E6%9E%9C.png" alt="1561387134284"></p>
+<blockquote>
+<p>Java字节码文件的运行工具：java.exe</p>
+</blockquote>
+<h3 id="1-6-2-HelloWorld案例常见错误"><a href="#1-6-2-HelloWorld案例常见错误" class="headerlink" title="1.6.2 HelloWorld案例常见错误"></a>1.6.2 HelloWorld案例常见错误</h3><ul>
+<li>  单词拼写问题<ul>
+<li>正确：class        错误：Class</li>
+<li>正确：String              错误：string</li>
+<li>正确：System            错误：system</li>
+<li>正确：main        错误：mian</li>
+</ul>
+</li>
+<li><pre><code>Java语言是一门严格区分大小写的语言</code></pre>
+</li>
+<li>  标点符号使用问题<ul>
+<li>不能用中文符号，英文半角的标点符号（正确）</li>
+<li>括号问题，成对出现</li>
+</ul>
+</li>
+</ul>
+<h3 id="1-6-3-Java程序的结构与格式"><a href="#1-6-3-Java程序的结构与格式" class="headerlink" title="1.6.3 Java程序的结构与格式"></a>1.6.3 Java程序的结构与格式</h3><p>结构：</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">类<span class="token punctuation">{</span>
+    方法<span class="token punctuation">{</span>
+        语句<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>格式：</p>
+<p>（1）每一级缩进一个Tab键</p>
+<p>（2）{}的左半部分在行尾，右半部分单独一行，与和它成对的”{“的行首对齐</p>
+<h3 id="1-6-4-Java程序的入口"><a href="#1-6-4-Java程序的入口" class="headerlink" title="1.6.4 Java程序的入口"></a>1.6.4 Java程序的入口</h3><p>Java程序的入口是main方法</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="1-6-5-编写Java程序时应该注意的问题"><a href="#1-6-5-编写Java程序时应该注意的问题" class="headerlink" title="1.6.5 编写Java程序时应该注意的问题"></a>1.6.5 编写Java程序时应该注意的问题</h3><h4 id="1、字符编码问题"><a href="#1、字符编码问题" class="headerlink" title="1、字符编码问题"></a>1、字符编码问题</h4><p>当cmd命令行窗口的字符编码与.java源文件的字符编码不一致，如何解决？</p>
+<p><img src="https://myhexo-blog.oss-cn-shenzhen.aliyuncs.com/bolg-images/%E5%91%BD%E4%BB%A4%E8%A1%8C%E7%BC%96%E8%AF%91%E4%B9%B1%E7%A0%81.png" alt="1557881223916"></p>
+<p>解决方案一：</p>
+<pre><code>在Notepad++等编辑器中，修改源文件的字符编码</code></pre>
+<p><img src="https://myhexo-blog.oss-cn-shenzhen.aliyuncs.com/bolg-images/Notepad%E4%BF%AE%E6%94%B9%E6%BA%90%E6%96%87%E4%BB%B6%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81.png" alt="1557881271819"></p>
+<p>解决方案二：</p>
+<pre><code>在使用javac命令式，可以指定源文件的字符编码</code></pre>
+<pre class="line-numbers language-cmd" data-language="cmd"><code class="language-cmd">javac -encoding utf-8 Review01.java<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+
+
+<h4 id="2、大小写问题"><a href="#2、大小写问题" class="headerlink" title="2、大小写问题"></a>2、大小写问题</h4><p>（1）源文件名：</p>
+<pre><code>在Windows操作系统中.java的源文件名不区分大小写，我们建议大家养成区分大小写的习惯。</code></pre>
+<p>（2）字节码文件名与类名</p>
+<pre><code>严格区分大小写</code></pre>
+<p>（3）代码中</p>
+<pre><code>严格区分大小写</code></pre>
+<h4 id="3、源文件名与类名一致问题？"><a href="#3、源文件名与类名一致问题？" class="headerlink" title="3、源文件名与类名一致问题？"></a>3、源文件名与类名一致问题？</h4><p>（1）源文件名是否必须与类名一致？public呢？</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">如果这个类不是<span class="token keyword">public</span>，那么源文件名可以和类名不一致。但是不便于代码维护。
+
+如果这个类是<span class="token keyword">public</span>，那么要求源文件名必须与类名一致。否则编译报错。
+
+我们建议大家，不管是否是<span class="token keyword">public</span>，都与源文件名保持一致，而且一个源文件尽量只写一个类，目的是为了好维护。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>（2）一个源文件中是否可以有多个类？public呢？</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">一个源文件中可以有多个类，编译后会生成多个<span class="token punctuation">.</span><span class="token keyword">class</span>字节码文件。
+
+但是一个源文件只能有一个<span class="token keyword">public</span>的类。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>（3）main方法必须在public的类中吗？</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">不是。
+
+但是后面写代码时，基本上main方法（主方法）习惯上都在<span class="token keyword">public</span>类中。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">luckycxy</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://www.luckycxy.top/posts/6c3a820c.html">http://www.luckycxy.top/posts/6c3a820c.html</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">luckycxy</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/JavaSE/">
+                                    <span class="chip bg-color">JavaSE</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="qq,qzone,wechat,weibo,twitter,facebook,google,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/null" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/null" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+        <style>
+    .valine-card {
+        margin: 1.5rem auto;
+    }
+
+    .valine-card .card-content {
+        padding: 20px 20px 5px 20px;
+    }
+
+    #vcomments textarea {
+        box-sizing: border-box;
+        background: url("/medias/comment_bg.png") 100% 100% no-repeat;
+    }
+
+    #vcomments p {
+        margin: 2px 2px 10px;
+        font-size: 1.05rem;
+        line-height: 1.78rem;
+    }
+
+    #vcomments blockquote p {
+        text-indent: 0.2rem;
+    }
+
+    #vcomments a {
+        padding: 0 2px;
+        color: #4cbf30;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    #vcomments img {
+        max-width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    #vcomments ol li {
+        list-style-type: decimal;
+    }
+
+    #vcomments ol,
+    ul {
+        display: block;
+        padding-left: 2em;
+        word-spacing: 0.05rem;
+    }
+
+    #vcomments ul li,
+    ol li {
+        display: list-item;
+        line-height: 1.8rem;
+        font-size: 1rem;
+    }
+
+    #vcomments ul li {
+        list-style-type: disc;
+    }
+
+    #vcomments ul ul li {
+        list-style-type: circle;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    #vcomments table, th, td {
+        border: 0;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments h1 {
+        font-size: 1.85rem;
+        font-weight: bold;
+        line-height: 2.2rem;
+    }
+
+    #vcomments h2 {
+        font-size: 1.65rem;
+        font-weight: bold;
+        line-height: 1.9rem;
+    }
+
+    #vcomments h3 {
+        font-size: 1.45rem;
+        font-weight: bold;
+        line-height: 1.7rem;
+    }
+
+    #vcomments h4 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    #vcomments h5 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+
+    #vcomments h6 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+
+    #vcomments p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    #vcomments hr {
+        margin: 12px 0;
+        border: 0;
+        border-top: 1px solid #ccc;
+    }
+
+    #vcomments blockquote {
+        margin: 15px 0;
+        border-left: 5px solid #42b983;
+        padding: 1rem 0.8rem 0.3rem 0.8rem;
+        color: #666;
+        background-color: rgba(66, 185, 131, .1);
+    }
+
+    #vcomments pre {
+        font-family: monospace, monospace;
+        padding: 1.2em;
+        margin: .5em 0;
+        background: #272822;
+        overflow: auto;
+        border-radius: 0.3em;
+        tab-size: 4;
+    }
+
+    #vcomments code {
+        font-family: monospace, monospace;
+        padding: 1px 3px;
+        font-size: 0.92rem;
+        color: #e96900;
+        background-color: #f8f8f8;
+        border-radius: 2px;
+    }
+
+    #vcomments pre code {
+        font-family: monospace, monospace;
+        padding: 0;
+        color: #e8eaf6;
+        background-color: #272822;
+    }
+
+    #vcomments pre[class*="language-"] {
+        padding: 1.2em;
+        margin: .5em 0;
+    }
+
+    #vcomments code[class*="language-"],
+    pre[class*="language-"] {
+        color: #e8eaf6;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+
+    #vcomments b,
+    strong {
+        font-weight: bold;
+    }
+
+    #vcomments dfn {
+        font-style: italic;
+    }
+
+    #vcomments small {
+        font-size: 85%;
+    }
+
+    #vcomments cite {
+        font-style: normal;
+    }
+
+    #vcomments mark {
+        background-color: #fcf8e3;
+        padding: .2em;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+
+    .v[data-class="v"] .vwrap .vheader .vinput {
+      width: 32%;
+      border-bottom: 1px dashed #dedede;
+    }
+</style>
+
+<div class="card valine-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="vcomments" class="card-content" style="display: grid">
+    </div>
+</div>
+
+<script src="/libs/valine/av-min.js"></script>
+<script src="/libs/valine/Valine.min.js"></script>
+<script>
+let metaPlaceholder = {"nick":"昵称/QQ号(必填)","mail":"邮箱(必填)","link":"网址(https://)"} ;
+//这里要换行
+new Valine({
+        el: '#vcomments',
+        appId: 'tDzVWdDvqc7kXSYhoWeMGUTE-gzGzoHsz',
+        appKey: 'GNeeSDexDM4JzJXjXUrHCy4S',
+        notify: 'true' === 'true',
+        verify: 'true' === 'true',
+        visitor: 'true' === 'true',
+        avatar: 'monsterid',
+        pageSize: '10',
+        lang: 'zh-CN',
+        placeholder: '留下你的足迹..',
+        meta: ["nick", "mail", "link"],
+        recordIP: 'true' === 'true',
+        enableQQ: 'monsterid',
+        requiredFields: ["c2ba61c7f7a21610975c5f3518879308"],
+        master: ["c2ba61c7f7a21610975c5f3518879308"],
+        friends: ["cb3e577ff029d6073400d5557effd41f", ""],
+        tagMeta: ["博主", "小伙伴", "访客"],
+        metaPlaceholder: metaPlaceholder,
+
+    });
+
+    document.body.addEventListener('click', function(e) {
+        if (e.target.classList.contains('vsubmit')) {
+            const email = document.querySelector('input[type=email]');
+            const nick = document.querySelector('input[name=nick]');
+            const reg = /^[A-Za-z0-9_-\u4e00-\u9fa5]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/;
+            if (!email.value || !nick.value || !reg.test(email.value)) {
+                const str = `<div class="valert txt-center"><div class="vtext">请填写正确的昵称和邮箱！</div></div>`;
+                const vmark = document.querySelector('.vmark');
+                vmark.innerHTML = str;
+                vmark.style.display = 'block';
+
+                e.stopPropagation();
+
+                setTimeout(function() {
+                    vmark.style.display = 'none';
+                    vmark.innerHTML = '';
+                }, 2500);
+            }
+        }
+        }, true);
+</script>
+
+
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/posts/61e8ee58.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/posts/20200928013627.jpg" class="responsive-img" alt="JavaSE-第15章 网络编程">
+                        
+                        <span class="card-title">JavaSE-第15章 网络编程</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-06-14
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%90%8E%E7%AB%AF%E7%AF%87/" class="post-category">
+                                    后端篇
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/JavaSE/">
+                        <span class="chip bg-color">JavaSE</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/posts/cbb1a636.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/posts/20200928013251.png" class="responsive-img" alt="JavaSE_第2章【Java基础语法】">
+                        
+                        <span class="card-title">JavaSE_第2章【Java基础语法】</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-06-14
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%90%8E%E7%AB%AF%E7%AF%87/" class="post-category">
+                                    后端篇
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/JavaSE/">
+                        <span class="chip bg-color">JavaSE</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'CODE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: Lucky阳<br />'
+            + '文章作者: Lucky阳<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="tencent"
+                   type="playlist"
+                   id="1380813521"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+    
+    <div class="container row center-align" style="margin-bottom: 15px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2022</span>
+            
+            <span id="year">2022</span>
+            <a href="/about" target="_blank">Lucky阳</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                class="white-color">214.4k</span>&nbsp;字
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <span id="sitetime">载入运行时间...</span>
+            <script>
+                function siteTime() {
+                    var seconds = 1000;
+                    var minutes = seconds * 60;
+                    var hours = minutes * 60;
+                    var days = hours * 24;
+                    var years = days * 365;
+                    var today = new Date();
+                    var startYear = "2022";
+                    var startMonth = "5";
+                    var startDate = "1";
+                    var startHour = "0";
+                    var startMinute = "0";
+                    var startSecond = "0";
+                    var todayYear = today.getFullYear();
+                    var todayMonth = today.getMonth() + 1;
+                    var todayDate = today.getDate();
+                    var todayHour = today.getHours();
+                    var todayMinute = today.getMinutes();
+                    var todaySecond = today.getSeconds();
+                    var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                    var diff = t2 - t1;
+                    var diffYears = Math.floor(diff / years);
+                    var diffDays = Math.floor((diff / days) - diffYears * 365);
+                    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+                        minutes);
+                    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+                        diffMinutes * minutes) / seconds);
+                    if (startYear == todayYear) {
+                        document.getElementById("year").innerHTML = todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffDays + " 天 " + diffHours +
+                            " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    } else {
+                        document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffYears + " 年 " + diffDays +
+                            " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    }
+                }
+                setInterval(siteTime, 1000);
+            </script>
+            
+            <br>
+            
+            <span id="icp"><img src="/medias/icp.png" style="vertical-align: text-bottom;" />
+                <a href="http://www.beian.miit.gov.cn/" target="_blank">闽ICP备xxxxxxx号-1</a>
+            </span>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+
+
+    <a href="mailto:183426842@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=183426842" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 183426842" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.11/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?aaa6c944b0ed07922901d7fc571a171d";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+<!-- 深色模式按钮 -->
+    <script>
+        if (localStorage.getItem('dark') === '1') {
+        document.body.classList.add('dark');
+        }
+        else if (new Date().getHours() >= 22 || new Date().getHours() < 7) {
+        document.body.classList.add('dark');
+        } 
+        else if (matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+        }
+    </script>
+    <a onclick="switchNightMode()" id="sma">
+        <i class="fas fa-lightbulb" id="nightMode" aria-hidden="true"></i>
+    </a>
+
+    <!-- 天气接口控件   -->
+    
+        <script type="text/javascript">
+        WIDGET = {FID: 'zLkJSQpqsh'}
+        </script>
+    <!-- <script type="text/javascript" src="https://apip.weatherdt.com/float/static/js/r.js?v=1111"></script> -->
+
+    <script type="text/javascript">
+      var windowWidth = $(window).width();
+      if (windowWidth > 768) {
+          document.write('<script type="text/javascript" src="https://apip.weatherdt.com/float/static/js/r.js?v=1111"><\/script>');
+      }
+    </script>
+    
+
+    
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i["DaoVoiceObject"] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            a.charset = "utf-8";
+            m.parentNode.insertBefore(a, m)
+        })(window, document, "script", ('https:' == document.location.protocol ? 'https:' : 'http:') +
+            "//widget.daovoice.io/widget/6984b559.js", "daovoice")
+        daovoice('init', {
+            app_id: "4xxxxxxxe"
+        });
+        daovoice('update');
+    </script>
+    
+
+	
+    
+
+    
+
+    
+    <script type="text/javascript" src="/libs/background/ribbon-dynamic.js" async="async"></script>
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>
